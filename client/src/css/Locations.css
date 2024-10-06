@@ -31,7 +31,21 @@ svg polygon:hover {
     z-index: 10;
     position: relative;
     top: 15%;
-    left: -5%;
+    left: -30%;
+}
+
+@media (max-width: 1600px) {
+    .venue1-button-overlay {
+        top: 10%;
+        left: -20%;
+    }
+}
+
+@media (max-width: 480px) {
+    .venue1-button-overlay {
+        top: 5%;
+        left: 0%;
+    }
 }
 
 .venue2-button-overlay {

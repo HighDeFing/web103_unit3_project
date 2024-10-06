@@ -36,7 +36,12 @@ const createLocationsTable = async () => {
         id SERIAL PRIMARY KEY,
         name VARCHAR(255) NOT NULL,
         description TEXT NOT NULL,
-        number_of_seats INT NOT NULL
+        number_of_seats INT NOT NULL,
+        address VARCHAR(255) NOT NULL,
+        city VARCHAR(255) NOT NULL,
+        state VARCHAR(2) NOT NULL,
+        zip VARCHAR(10) NOT NULL,
+        image VARCHAR(255) NOT NULL
     )`;
 
     try {
@@ -82,12 +87,17 @@ const seedLocationsTable = async () => {
 
     locationsData.forEach((location) => {
         const insertQuery = {
-            text: 'INSERT INTO locations (id, name, description, number_of_seats) VALUES ($1, $2, $3, $4)',
+            text: 'INSERT INTO locations (id, name, description, number_of_seats, address, city, state, zip, image) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)',
             values: [
                 location.id,
                 location.name,
                 location.description,
-                location.numberOfSeats
+                location.numberOfSeats,
+                location.address,
+                location.city,
+                location.state,
+                location.zip,
+                location.image
             ]
         };
 
