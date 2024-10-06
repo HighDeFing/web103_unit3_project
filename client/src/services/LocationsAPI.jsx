@@ -1,10 +1,11 @@
 // client/src/services/LocationsAPI.jsx
 
-const API_BASE_URL = 'http://localhost:3000'; // Adjust the base URL as needed
+const API_BASE_URL = 'http://localhost:3000/api'; // Adjust the base URL as needed
 
 const getAllEvents = async () => {
     try {
         const response = await fetch(`${API_BASE_URL}/events`);
+        console.log(response)
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }

@@ -55,3 +55,19 @@
     padding: 10px;
     text-align: center;
 }
+
+.events-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px; /* Adjust the gap as needed */
+}
+
+/* client/src/App.css */
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: url('../assets/unitygrid.jpg') no-repeat center center fixed;
+    background-size: cover;
+}

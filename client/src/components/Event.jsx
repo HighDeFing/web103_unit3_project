@@ -1,62 +1,25 @@
-import React, { useState, useEffect } from 'react'
-import '../css/Event.css'
+import React from 'react';
+import '../css/Event.css';
 
-const Event = (props) => {
-
-    const [event, setEvent] = useState([])
-    const [time, setTime] = useState([])
-    const [remaining, setRemaining] = useState([])
-
-    useEffect(() => {
-        (async () => {
-            try {
-                const eventData = await EventsAPI.getEventsById(props.id)
-                setEvent(eventData)
-            }
-            catch (error) {
-                throw error
-            }
-        }) ()
-    }, [])
-
-    useEffect(() => {
-        (async () => {
-            try {
-                const result = await dates.formatTime(event.time)
-                setTime(result)
-            }
-            catch (error) {
-                throw error
-            }
-        }) ()
-    }, [event])
-
-    useEffect(() => {
-        (async () => {
-            try {
-                const timeRemaining = await dates.formatRemainingTime(event.remaining)
-                setRemaining(timeRemaining)
-                dates.formatNegativeTimeRemaining(remaining, event.id)
-            }
-            catch (error) {
-                throw error
-            }
-        }) ()
-    }, [event])
+const Event = ({ id, name, date, image, place, description }) => {
+    const eventDate = new Date(date);
+    const day = eventDate.getDate();
+    const month = eventDate.getMonth() + 1; // Months are zero-based
+    const year = eventDate.getFullYear();
 
     return (
         <article className='event-information'>
-            <img src={event.image} />
+            <img src={`http://localhost:3000/data/${image}`} alt={name} />
 
             <div className='event-information-overlay'>
                 <div className='text'>
-                    <h3>{event.title}</h3>
-                    <p><i className="fa-regular fa-calendar fa-bounce"></i> {event.date} <br /> {time}</p>
-                    <p id={`remaining-${event.id}`}>{remaining}</p>
+                    <h3>{name}</h3>
+                    <p><i className="fa-regular fa-calendar fa-bounce"></i> {`${day}/${month}/${year}`}</p>
+                    <p>{place}</p>
                 </div>
             </div>
         </article>
-    )
-}
+    );
+};
 
-export default Event
+export default Event;

@@ -1,16 +1,9 @@
-.app {
-    background: url('./assets/unitygrid.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-}
-
 header {
     padding: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 100; /* Ensure header is above other elements */
 }
 
 .main-header {
@@ -18,16 +11,28 @@ header {
     width: 85vw;
     align-items: flex-end;
     position: relative;
-    z-index: 1;
+    z-index: 101;
+
+}
+
+h1 {
+    z-index: 1001;
+    position: relative; /* Ensure it is positioned to apply z-index */
 }
 
 .header-buttons {
     width: 30%;
     display: flex;
     justify-content: space-around;
+    z-index: 101
 }
 
 .header-buttons button {
     margin-right: 20px;
     margin-left: 20px;
+    z-index: 101;
 }
+
+/* client/src/App.css */
+
+
