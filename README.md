@@ -12,18 +12,18 @@ The following **required** functionality is completed:
 
 <!-- Make sure to check off completed functionality below -->
 
-- [ ] **The web app uses React to display data from the API**
-- [ ] **The web app is connected to a PostgreSQL database, with an appropriately structured Events table**
-  - [ ] **NOTE: Your GIF or a screenshot added to this README must include a view of your Railway database that shows the contents of the table used by your app**
-- [ ] **The web app displays the title of the app**
-- [ ] **A visual interface allows the user to select a Location they would like to view**
-- [ ] **Clicking on a Location shows a list of all items from the Events table that corresponds to that Location**
-- [ ] **Each Location detail page should have its own unique URL**
+- [X] **The web app uses React to display data from the API**
+- [X] **The web app is connected to a PostgreSQL database, with an appropriately structured Events table**
+  - [X] **NOTE: Your GIF or a screenshot added to this README must include a view of your Railway database that shows the contents of the table used by your app**
+- [X] **The web app displays the title of the app**
+- [X] **A visual interface allows the user to select a Location they would like to view**
+- [X] **Clicking on a Location shows a list of all items from the Events table that corresponds to that Location**
+- [X] **Each Location detail page should have its own unique URL**
 
 The following **optional** features are implemented:
 
-- [ ] An additional page shows all possible `Events` that the user can sort and filter by `Location`
-- [ ] `Events` display a countdown showing the time remaining before that event and appears with different formatting when the event has passed
+- [X] An additional page shows all possible `Events` that the user can sort and filter by `Location`
+- [X] `Events` display a countdown showing the time remaining before that event and appears with different formatting when the event has passed
 
 The following **additional** features are implemented:
 
@@ -33,10 +33,11 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+![2024-10-06 20-54-30.gif](server%2Fdata%2F2024-10-06%2020-54-30.gif)
+
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  GIF tool here
+GIF created with OBS
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
@@ -44,11 +45,12 @@ GIF created with ...  GIF tool here
 
 ## Notes
 
-Describe any challenges encountered while building the app or any additional context you'd like to add.
+The biggest challenges were the routing of the app. When creating component some of the times it didn't work correctly.
+Also using the same template or fork that was established in the beginning of the project.
 
 ## License
 
-Copyright [yyyy] [name of copyright owner]
+Copyright [2024] [Heider Delgado]
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
