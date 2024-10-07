@@ -33,7 +33,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-![2024-10-06 20-54-30.gif](server%2Fdata%2F2024-10-06%2020-54-30.gif)
+![walkthrough.gif](server%2Fdata%2Fwalkthrough.gif)
 
 
 <!-- Replace this with whatever GIF tool you used! -->
